@@ -32,6 +32,6 @@ func (a *App) Handler(w http.ResponseWriter, r *http.Request) {
 		Payload: "Structured logging example.",
 	})
 	fmt.Fprintf(w, "Hello World!\nWie geht's dir heute?\n")
-	fmt.Fprintf(w, "MIAW\n", os.Getenv("MIAW"), "\n\n")
-	fmt.Fprintf(w, "JSON\n", os.Getenv("EPLK"))
+	fmt.Fprintf(w, "MIAW\n%s\n\n", os.Getenv("MIAW"))
+	fmt.Fprintf(w, "JSON\n%s", os.Getenv("EPLK"))
 }
